@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp31
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("enter text : ");
+            string sent = Console.ReadLine();
+            
+            Console.Write("the reverse : ");
+            for (int i = sent.Length - 1; i >= 0; i--)
+            {
+                Console.Write(sent[i]);
+            }
+
+            Console.ReadLine();        
+        }
+    }
+}
