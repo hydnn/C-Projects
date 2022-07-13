@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp31
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("***********\nFIBONACCI\n***********");
+            Fibonacci fib = new Fibonacci();
+            fib.FirstOp();
+            fib.SecondOp();
+
+            Console.ReadLine();        
+        }
+    }
+
+    public class Fibonacci
+    {
+          public int number1 = 0, number2 = 1, number3, x, all = 0, avg = 0;
+        public void FirstOp()  // getting the length of serie from the user
+        {
+            Console.Write("Length of the serie : ");
+            x = Convert.ToInt32(Console.ReadLine()); Console.WriteLine();
+            Console.Write(number1 + " " + number2 + " ");
+            for (int i = 2; i < x; ++i)
+            {
+                number3 = number1 + number2;
+                Console.Write(number3 + " ");
+                number1 = number2;
+                number2 = number3;
+                all += x;
+            }
+            Console.WriteLine("\n");
+        }
+
+        public void SecondOp()  //calculating the average 
+        {
+            avg = all / x;
+            Console.WriteLine($"The average: {avg}");
+        }
+    }
+}
